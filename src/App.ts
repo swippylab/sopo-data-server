@@ -1,16 +1,26 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
+import { buildSchema } from 'type-graphql';
+import { PostResolver } from './graphql/post/resolver';
 
-const app = express();
-const port = process.env.PORT || 3000;
+const port = 4000;
 
-app.get('/hello', (req: Request, res: Response, next: NextFunction) => {
-  res.send('hello express typesciprt');
-});
+async function startServer() {
+  const schema = await buildSchema({
+    resolvers: [PostResolver],
+  });
+  const server = new ApolloServer({ schema });
+  await server.start();
 
-app.listen(port, () => {
-  console.log(`
-  ################################################
-    Server listening on port: ${port}
-  ################################################
-`);
-});
+  const app = express();
+  server.applyMiddleware({
+    app,
+    path: '/',
+  });
+
+  await new Promise<void>((r) => app.listen({ port: port }, r));
+
+  console.log(`🚀 Server ready at http://localhost:${port}${server.graphqlPath}`);
+}
+
+startServer();

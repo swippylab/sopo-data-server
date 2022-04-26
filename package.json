@@ -2,13 +2,19 @@
   "name": "sopo-data-server",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-		"build": "tsc -p .",
-		"start": "node src/app.js",
-    "dev": "ts-node-dev --inspect --watch -- ./src/app.ts",
-		"lint": "eslint . --ext .js,.jsx,.ts,.tsx"
-},
+    "build": "tsc -p .",
+    "start": "node src/App.js",
+    "dev": "ts-node-dev --inspect --watch -- ./src/App.ts",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
   "dependencies": {
-    "express": "^4.18.0"
+    "apollo-server-core": "^3.6.7",
+    "apollo-server-express": "^3.6.7",
+    "class-validator": "^0.13.2",
+    "express": "^4.18.0",
+    "graphql": "^15.3.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
   },
   "devDependencies": {
     "@types/eslint": "^8",
