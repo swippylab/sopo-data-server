@@ -1,16 +1,17 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import { buildSchema } from 'type-graphql';
-import 'reflect-metadata';
-import { PostResolver } from './graphql/post/resolver';
+import { PostResolver } from './feature/post/resolver';
+import { PostTypes } from './feature/post/type';
+import { UserTypes } from './feature/user/type';
+import { UserResolver } from './feature/user/resolver';
+
+const typeDefs = [PostTypes, UserTypes];
+const resolvers = [PostResolver, UserResolver];
 
 const port = 4000;
 
 async function startServer() {
-  const schema = await buildSchema({
-    resolvers: [PostResolver],
-  });
-  const server = new ApolloServer({ schema });
+  const server = new ApolloServer({ typeDefs, resolvers });
   await server.start();
 
   const app = express();

@@ -5,18 +5,22 @@
     "build": "tsc -p .",
     "start": "node src/App.js",
     "dev": "ts-node-dev --inspect --watch -- ./src/App.ts",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
     "apollo-server-core": "^3.6.7",
     "apollo-server-express": "^3.6.7",
-    "class-validator": "^0.13.2",
     "express": "^4.18.0",
     "graphql": "^15.3.0",
-    "reflect-metadata": "^0.1.13",
-    "type-graphql": "^1.1.1"
+    "mongoose": "^6.3.1"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/typescript": "^2.4.8",
+    "@graphql-codegen/typescript-mongodb": "^2.3.6",
+    "@graphql-codegen/typescript-resolvers": "^2.6.1",
     "@types/eslint": "^8",
     "@types/express": "^4",
     "@types/node": "^17.0.27",
