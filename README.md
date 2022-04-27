@@ -23,14 +23,11 @@ export const UserTypes = gql`
 
 ```  
 
-&nbsp;
-
 - src/App.ts에 위에서 만든 타입을 추가한다.  
 ```  
 const typeDefs = [PostTypes, UserTypes, 임포트하여 여기에 추가];
 ```  
 
-&nbsp;
 
 - 실행을 하여 스키마가 의도한대로 정의되었는지 확인한다.
 ```  
@@ -38,8 +35,6 @@ const typeDefs = [PostTypes, UserTypes, 임포트하여 여기에 추가];
 
 브라우저에 "localhost:4000" 입력 후 등록된 스키마 확인
 ```  
-
-&nbsp;
 
 - 스키마를 기반으로 타입을 만든다.   
   - graphql generator 실행  
@@ -53,8 +48,6 @@ const typeDefs = [PostTypes, UserTypes, 임포트하여 여기에 추가];
 3. src/feature/common/graphql-type.ts 파일에 덮어쓴다.  
 4. codegen.yml 설정을 통해 위 1,2,3번의 디테일(경로, 타입 등)을 수정 할 수 있다.
 ```  
-
-&nbsp;
 
 - resolver(구현코드)를 만든다.  
   - src/feature/{작업폴더}/resolver.ts 생성  
@@ -76,14 +69,10 @@ function getUser(parent: object, args: Partial<QueryGetUserArgs>): User {
 }
 ```  
 
-&nbsp;
-
 - src/App.ts에 위에서 만든 리졸버를 추가한다.  
 ```  
 const resolvers = [PostResolver, UserResolver, 임포트하여 여기에 추가];
 ``` 
-
-&nbsp;
 
 - 실행을 하여 리졸버가 의도한대로 실행되는지 확인한다.
 ```  
