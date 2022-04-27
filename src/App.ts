@@ -1,6 +1,7 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
+import 'reflect-metadata';
 import { PostResolver } from './graphql/post/resolver';
 
 const port = 4000;

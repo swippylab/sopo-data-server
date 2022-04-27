@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { Arg, Int, Mutation, Query, Resolver } from 'type-graphql';
 import { Post, PostInput } from './type';
 
