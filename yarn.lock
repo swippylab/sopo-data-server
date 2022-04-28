@@ -819,24 +819,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/typescript-mongodb@npm:^2.3.6":
-  version: 2.3.6
-  resolution: "@graphql-codegen/typescript-mongodb@npm:2.3.6"
-  dependencies:
-    "@graphql-codegen/plugin-helpers": ^2.4.0
-    "@graphql-codegen/typescript": ^2.4.8
-    "@graphql-codegen/visitor-plugin-common": 2.7.4
-    "@graphql-tools/utils": ^8.1.1
-    auto-bind: ~4.0.0
-    lodash: ~4.17.0
-    tslib: ~2.3.0
-  peerDependencies:
-    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-    graphql-tag: ^2.0.0
-  checksum: c98420ef39b2ee4f1e361683e49e6d7f43675fba5706d42621715e75bfd7f8f18df81b751bb94506cfc5de69691dcc2b26709161e2a474f0ff3a44be7ffb2ef9
-  languageName: node
-  linkType: hard
-
 "@graphql-codegen/typescript-resolvers@npm:^2.6.1":
   version: 2.6.1
   resolution: "@graphql-codegen/typescript-resolvers@npm:2.6.1"
@@ -6245,7 +6227,6 @@ __metadata:
   dependencies:
     "@graphql-codegen/cli": 2.6.2
     "@graphql-codegen/typescript": ^2.4.8
-    "@graphql-codegen/typescript-mongodb": ^2.3.6
     "@graphql-codegen/typescript-resolvers": ^2.6.1
     "@types/eslint": ^8
     "@types/express": ^4
