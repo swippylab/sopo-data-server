@@ -1,4 +1,4 @@
-import './service/common/mongodb';
+import { connectMongoDB } from './service/common/mongodb';
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { PostResolver } from './service/post/resolver';
@@ -14,7 +14,11 @@ const resolvers = [PostResolver, UserResolver, MongoExampleResolver];
 const port = 4000;
 
 async function startServer() {
+  const isConnectMongoDB = await connectMongoDB();
+  if (!isConnectMongoDB) return;
+
   const server = new ApolloServer({ typeDefs, resolvers });
+  console.log(`Server starting...`);
   await server.start();
 
   const app = express();
