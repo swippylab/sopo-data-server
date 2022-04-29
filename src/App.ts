@@ -1,12 +1,12 @@
-import { connectMongoDB } from './service/common/mongodb';
+import { connectMongoDB } from './services/common/mongodb';
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import { PostResolver } from './service/post/resolver';
-import { PostTypes } from './service/post/type';
-import { UserTypes } from './service/user/type';
-import { UserResolver } from './service/user/resolver';
-import { MongoExampleTypes } from './service/mongoExample/type';
-import { MongoExampleResolver } from './service/mongoExample/resolver';
+import { PostResolver } from './services/post/resolver';
+import { PostTypes } from './services/post/type';
+import { UserTypes } from './services/user/type';
+import { UserResolver } from './services/user/resolver';
+import { MongoExampleTypes } from './services/mongoExample/type';
+import { MongoExampleResolver } from './services/mongoExample/resolver';
 
 const typeDefs = [PostTypes, UserTypes, MongoExampleTypes];
 const resolvers = [PostResolver, UserResolver, MongoExampleResolver];
