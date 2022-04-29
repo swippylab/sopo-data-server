@@ -1,4 +1,4 @@
-import { QueryGetUserArgs, Resolvers, User } from '../common/graphql-type';
+import { QueryGetUserArgs, Resolvers, User } from '../commons/graphql-type';
 
 export const UserResolver: Resolvers = {
   Query: {

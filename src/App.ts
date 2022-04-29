@@ -1,4 +1,4 @@
-import { connectMongoDB } from './services/common/mongodb';
+import { connectMongoDB } from './services/commons/mongodb';
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { PostResolver } from './services/post/resolver';

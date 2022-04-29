@@ -1,4 +1,4 @@
-import { Resolvers, Post, QueryPostByIdArgs, MutationAddPostArgs } from '../common/graphql-type';
+import { Resolvers, Post, QueryPostByIdArgs, MutationAddPostArgs } from '../commons/graphql-type';
 
 export const PostResolver: Resolvers = {
   Query: {
